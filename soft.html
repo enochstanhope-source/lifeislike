@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="images/fa1.jpg" type="image/jpeg">
+	<title>Soft Skills - Mastering Professional Excellence</title>
+	<link rel="stylesheet" href="styles/index.css">
+	<link rel="stylesheet" href="styles/soft.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'" />
+	<noscript>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+	</noscript>
+	<!-- Firebase SDK -->
+	<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+	<script src="scripts/firebase-init.js"></script>
+	<script src="scripts/menu.js" defer></script>
+	<script src="scripts/enrollment.js" defer></script>
+</head>
+<body>
+<section class="popular-products">
+          <h2
+            style="color:#ebebeb; font-weight:400; text-align: center; letter-spacing:1px; margin-bottom:1rem; text-shadow:0 6px 8px rgb(255, 255, 255);">
+            Room Reservations</h2>
+          <div class="product-grid">
+            <div class="product-card" data-course-id="web-dev">
+    
+              <button class="favorite"><i class="fas fa-bookmark"></i></button>
+              <div class="product-info">
+                <div class="course-badge"><i class="fas fa-bed "></i> Room type</div>
+                <h3>Family Room 01</h3>
+                <div class="product-media">
+                  <video class="product-video" playsinline autoplay muted loop preload="auto" poster="images/nophoto.jpg">
+                    <source src="images/suite.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <div class="course-details">
+                  <span class="duration"><i class="fas fa-clock"></i>Cozy alcove with sweeping winter vistas and thoughtfully separated living quarters</span>
+
+                </div>
+                <div class="product-rating">
+                  <span class="stars">3.2⭐⭐</span>
+                  <span class="reviews">Available</span>
+                </div>
+                <p class="price">₦35,500<span class="installment">/ Per night</span></p>
+                <button class="enroll">Book Now</button>
+              </div>
+            </div>
+              <div class="product-card" data-course-id="web-dev">
+    
+              <button class="favorite"><i class="fas fa-bookmark"></i></button>
+              <div class="product-info">
+                <div class="course-badge"><i class="fas fa-bed "></i> Room type</div>
+                <h3>Family Room 02</h3>
+                <div class="product-media">
+                  <video class="product-video" playsinline autoplay muted loop preload="auto" poster="images/nophoto.jpg">
+                    <source src="images/ss3.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <div class="course-details">
+                  <span class="duration"><i class="fas fa-clock"></i>Bright interiors, elevated comforts, and a layout designed for family gatherings</span>
+
+                </div>
+                <div class="product-rating">
+                  <span class="stars">3.2⭐⭐</span>
+                  <span class="reviews">Available</span>
+                </div>
+                <p class="price">₦36,000<span class="installment">/ Per night</span></p>
+                <button class="enroll">Book Now</button>
+              </div>
+            </div>
+              <div class="product-card" data-course-id="web-dev">
+    
+              <button class="favorite"><i class="fas fa-bookmark"></i></button>
+              <div class="product-info">
+                <div class="course-badge"><i class="fas fa-bed "></i> Room type</div>
+                <h3>Family Room 03</h3>
+                <div class="product-media">
+                  <video class="product-video" playsinline autoplay muted loop preload="auto" poster="images/nophoto.jpg">
+                    <source src="images/standard.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <div class="course-details">
+                  <span class="duration"><i class="fas fa-clock"></i>Panoramic city views, plush finishes, open-plan living for effortless socializing</span>
+
+                </div>
+                <div class="product-rating">
+                  <span class="stars">3.2⭐⭐</span>
+                  <span class="reviews">Available</span>
+                </div>
+                <p class="price">₦36,500<span class="installment">/ Per night</span></p>
+                <button class="enroll">Book Now</button>
+              </div>
+            </div>
+              <div class="product-card" data-course-id="web-dev">
+    
+              <button class="favorite"><i class="fas fa-bookmark"></i></button>
+              <div class="product-info">
+                <div class="course-badge"><i class="fas fa-bed "></i> Room type</div>
+                <h3>Family Room 04</h3>
+                <div class="product-media">
+                  <video class="product-video" playsinline autoplay muted loop preload="auto" poster="images/nophoto.jpg">
+                    <source src="images/ss9.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <div class="course-details">
+                  <span class="duration"><i class="fas fa-clock"></i>Tranquil corner suite with curated decor and an airy open-plan design</span>
+
+                </div>
+                <div class="product-rating">
+                  <span class="stars">3.2⭐⭐</span>
+                  <span class="reviews">Available</span>
+                </div>
+                <p class="price">₦37,000<span class="installment">/ Per night</span></p>
+                <button class="enroll">Book Now</button>
+              </div>
+            </div>
+              <div class="product-card" data-course-id="web-dev">
+    
+              <button class="favorite"><i class="fas fa-bookmark"></i></button>
+              <div class="product-info">
+                <div class="course-badge"><i class="fas fa-bed "></i> Room type</div>
+                <h3>Family Room 05</h3>
+                <div class="product-media">
+                  <video class="product-video" playsinline autoplay muted loop preload="auto" poster="images/nophoto.jpg">
+                    <source src="images/ss4.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <div class="course-details">
+                  <span class="duration"><i class="fas fa-clock"></i>Skyline-facing room, premium touches, and a private bedroom for quiet retreats</span>
+
+                </div>
+                <div class="product-rating">
+                  <span class="stars">3.2⭐⭐</span>
+                  <span class="reviews">Available</span>
+                </div>
+                <p class="price">₦37,500<span class="installment">/ Per night</span></p>
+                <button class="enroll">Book Now</button>
+              </div>
+            </div>
+              <div class="product-card" data-course-id="web-dev">
+    
+              <button class="favorite"><i class="fas fa-bookmark"></i></button>
+              <div class="product-info">
+                <div class="course-badge"><i class="fas fa-bed "></i> Room type</div>
+                <h3>Family Room 06</h3>
+                <div class="product-media">
+                  <video class="product-video" playsinline autoplay muted loop preload="auto" poster="images/nophoto.jpg">
+                    <source src="images/ss5.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <div class="course-details">
+                  <span class="duration"><i class="fas fa-clock"></i>Garden outlook, minimalist luxury, and clearly separated rest and social areas</span>
+
+                </div>
+                <div class="product-rating">
+                  <span class="stars">3.2⭐⭐</span>
+                  <span class="reviews">Available</span>
+                </div>
+                <p class="price">₦38,000<span class="installment">/ Per night</span></p>
+                <button class="enroll">Book Now</button>
+              </div>
+            </div>
+              <div class="product-card" data-course-id="web-dev">
+    
+              <button class="favorite"><i class="fas fa-bookmark"></i></button>
+              <div class="product-info">
+                <div class="course-badge"><i class="fas fa-bed "></i> Room type</div>
+                <h3>Family Room 07</h3>
+                <div class="product-media">
+                  <video class="product-video" playsinline autoplay muted loop preload="auto" poster="images/nophoto.jpg">
+                    <source src="images/x1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <div class="course-details">
+                  <span class="duration"><i class="fas fa-clock"></i>Sunrise-facing ambience, refined decor, and a snug private bedroom for two</span>
+
+                </div>
+                <div class="product-rating">
+                  <span class="stars">3.2⭐⭐</span>
+                  <span class="reviews">Available</span>
+                </div>
+                <p class="price">₦38,500<span class="installment">/ Per night</span></p>
+                <button class="enroll">Book Now</button>
+              </div>
+            </div>
+              <div class="product-card" data-course-id="web-dev">
+    
+              <button class="favorite"><i class="fas fa-bookmark"></i></button>
+              <div class="product-info">
+                <div class="course-badge"><i class="fas fa-bed "></i> Room type</div>
+                <h3>Family Room 08</h3>
+                <div class="product-media">
+                  <video class="product-video" playsinline autoplay muted loop preload="auto" poster="images/nophoto.jpg">
+                    <source src="images/ss1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <div class="course-details">
+                  <span class="duration"><i class="fas fa-clock"></i>Contemporary loft layout with modern conveniences and distinct living quarters</span>
+
+                </div>
+                <div class="product-rating">
+                  <span class="stars">3.2⭐⭐</span>
+                  <span class="reviews">Available</span>
+                </div>
+                <p class="price">₦39,000<span class="installment">/ Per night</span></p>
+                <button class="enroll">Book Now</button>
+              </div>
+            </div>
+              
+
+           
+          </div>
+        </section>
+	 
+    <script src="scripts/soft.js" defer></script>
+  <script>
+    // Randomize room prices between ₦35,000 and ₦44,000 for .popular-products
+    (function () {
+      function formatNaira(num) {
+        return '₦' + num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      }
+
+      function randomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var priceEls = document.querySelectorAll('.popular-products .price');
+        priceEls.forEach(function (p) {
+          var installment = p.querySelector('.installment');
+          var installmentHtml = installment ? installment.outerHTML : '';
+
+          var rand = randomInt(100000, 200000);
+
+          p.innerHTML = formatNaira(rand) + (installmentHtml ? installmentHtml : '');
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

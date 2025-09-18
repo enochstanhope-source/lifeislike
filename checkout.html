@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Checkout - Wintel Suites Hotels and Resort</title>
+    <meta name="description" content="Secure payment checkout page for Wintel Suites Hotels and Resort">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/checkout.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="checkout-container">
+        <div class="checkout-wrapper">
+            <!-- Header Section -->
+            <div class="checkout-header">
+                <h1>Complete Your Payment</h1>
+                <p>Please follow the instructions below to complete your payment</p>
+            </div>
+
+            <!-- Selected Room (populated from enroll page) -->
+            <div class="selected-room-wrap">
+                <p class="selected-room-label">Selected Room</p>
+                <h2 id="selectedRoomName" class="selected-room-name">— None —</h2>
+                <div class="selected-room-meta">
+                    <div class="selected-room-price">
+                        <span class="meta-label">Price</span>
+                        <span id="selectedRoomPrice" class="meta-value">—</span>
+                    </div>
+                    <div class="selected-room-features">
+                        <span class="meta-label">Features</span>
+                        <p id="selectedRoomFeatures" class="meta-value">—</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accepted Cards -->
+            <div class="accepted-cards" aria-hidden="false">
+                <p class="accepted-text">We accept</p>
+                <div class="card-logos" role="list">
+                    <img src="images/visa.jpg" alt="Visa" role="listitem"/>
+                    <img src="images/verve.jpg" alt="Verve" role="listitem"/>
+                    <img src="images/mastercard.jpg" alt="MasterCard" role="listitem"/>
+                </div>
+            </div>
+
+            <!-- Payment Information Section -->
+            <div class="payment-info">
+                <!-- Card Preview -->
+                <div class="card-preview">
+                    <div class="card-front">
+                        <div class="card-logo">
+                            <i class="fab fa-cc-visa"></i>
+                        </div>
+                        <div class="card-number" id="cardNumberPreview">•••• •••• •••• ••••</div>
+                        <div class="card-details">
+                            <div class="card-holder">
+                                <span class="label">Card Holder</span>
+                                <span class="value" id="cardHolderPreview">YOUR NAME</span>
+                            </div>
+                            <div class="card-expires">
+                                <span class="label">Expires</span>
+                                <span class="value" id="cardExpiryPreview">MM/YY</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Form -->
+                <form id="paymentForm" class="payment-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="cardNumber" name="cardNumber" placeholder=" " required 
+                                   pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}" maxlength="19">
+                            <label for="cardNumber">
+                                <i class="fas fa-credit-card"></i> Card Number
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="cardHolder" name="cardHolder" placeholder=" " required>
+                        <label for="cardHolder">
+                            <i class="fas fa-user"></i> Card Holder Name
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <input type="text" id="expiryDate" name="expiryDate" placeholder=" " 
+                                   required pattern="(0[1-9]|1[0-2])\/([0-9]{2})" maxlength="5">
+                            <label for="expiryDate">
+                                <i class="fas fa-calendar"></i> Expiry Date (MM/YY)
+                            </label>
+                        </div>
+
+                        <div class="form-group half">
+                            <input type="text" id="cvv" name="cvv" placeholder=" " 
+                                   required pattern="[0-9]{3,4}" maxlength="4">
+                            <label for="cvv">
+                                <i class="fas fa-lock"></i> CVV
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder=" " required>
+                        <label for="email">
+                            <i class="fas fa-envelope"></i> Email Address
+                        </label>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-check-circle"></i> Verify Payment
+                        </button>
+                        <a href="index.html" class="cancel-btn">
+                            <i class="fas fa-times-circle"></i> Cancel
+                        </a>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Security Notice -->
+            <div class="security-notice">
+                <i class="fas fa-shield-alt"></i>
+                <p>Your payment information is secure. We encrypt all data for maximum security.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="scripts/checkout.js"></script>
+    <script src="scripts/card-handler.js"></script>
+</body>
+</html>

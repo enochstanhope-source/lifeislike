@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find Winter Suites Hotel in Owerri — Your luxurious stay awaits. View our location on an interactive satellite map and get directions.">
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Winter Suites Hotel, Owerri — Location & Directions">
+    <meta property="og:description" content="Find Winter Suites Hotel in Owerri — Your luxurious stay awaits. View our location on an interactive satellite map and get directions.">
+    <meta property="og:type" content="website">
+    <link rel="shortcut icon" href="images/fa1.jpg" type="image/jpeg">
+    <title>Winter Suites Hotel, Owerri — Location & Directions</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/map.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'" />
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    </noscript>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="scripts/firebase-init.js"></script>
+    
+    <script src="scripts/menu.js" defer></script>
+    <!-- Using Google Maps iframe embed for a real Google satellite view. Leaflet includes removed. -->
+</head>
+<body>
+    <!-- Loader Start -->
+    <div id="loader-overlay">
+        <div class="loader-spinner"></div>
+    </div>
+    <!-- Loader End -->
+    <!-- Menu will be injected here by menu.js -->
+
+    <div class="page-container">
+        <div class="map-container">
+            <div class="map-header">
+                <h1><i class="fas fa-map-marker-alt"></i> Winter Suites Hotel — Find Us</h1>
+                <p class="map-sub">Satellite view centered on Winter Suites, Owerri. Use the controls to zoom, fullscreen, or open the location in Google Maps.</p>
+            </div>
+            <div class="location-info">
+                <div class="info-card" id="winterInfo">
+                    <h2>Winter Suites Hotel</h2>
+                    <p><i class="fas fa-location-dot"></i> Owerri, Imo State, Nigeria</p>
+                    <p><i class="fas fa-map"></i> Satellite imagery (approximate location)</p>
+                    <div class="quick-actions">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="map-wrapper">
+                <div id="map"></div>
+            </div>
+        </div>
+    </div>
+     <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About Winter Suites Hotel</h3>
+        <ul>
+          <li><a href="#" onclick="event.preventDefault(); window.location.href='ourstory.html';"><i
+                class="fas fa-info-circle"></i> About Us</a></li>
+          <li class="ourteam-mobile-margin"><a href="#"
+              onclick="event.preventDefault(); window.location.href='ourteam.html';"><i
+                class="fas fa-chalkboard-teacher"></i> Our Board</a></li>
+
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Rooms</h3>
+        <ul>
+          <li><a href="digital.html"><i class="fas fa-bed"></i> Standard Room</a></li>
+          <li><a href="business.html"><i class="fas fa-gem"></i> Deluxe Room</a></li>
+          <li><a href="vocational.html"><i class="fas fa-briefcase"></i> Executive Room</a></li>
+          <li><a href="soft.html"><i class="fas fa-home"></i> Family Suite</a></li>
+
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <ul>
+          <li><a href="support.html"><i class="fas fa-headset"></i> Customer Support</a></li>
+          <li><a href="map.html"><i class="fas fa-map-marker-alt"></i> Find Us</a></li>
+
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Connect With Us</h3>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="newsletter">
+          <h4>Get Updates on New Courses</h4>
+          <form class="newsletter-form" id="newsletterForm" data-api-url="">
+            <!-- name is optional but improves personalization -->
+            <label class="sr-only" for="newsletterName">Your name (optional)</label>
+            <input type="text" id="newsletterName" name="name" placeholder="Your name (optional)" maxlength="60" />
+
+            <label class="sr-only" for="newsletterEmail">Email address</label>
+            <input type="email" id="newsletterEmail" name="email" placeholder="Enter your email" required
+              aria-describedby="newsletterHelp" />
+
+            <button type="submit" id="submitBtn">
+              <i class="fas fa-paper-plane" aria-hidden="true"></i>
+              <span class="btn-text">Subscribe</span>
+            </button>
+            <span class="sending-text" aria-hidden="true">Sending...</span>
+          </form>
+          <div class="newsletter-message" id="newsletterMessage" role="status" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="payment-methods">
+        <picture>
+          <img src="images/visa.jpg" alt="Visa" />
+        </picture>
+        <picture>
+          <img src="images/mastercard.jpg" alt="Mastercard" />
+        </picture>
+        <picture>
+          <img src="images/verve.jpg" alt="Verve" />
+        </picture>
+        <!-- Preload above-the-fold hero images (WebP preferred) -->
+        <link rel="preload" href="images/serious1.webp" as="image" type="image/webp" />
+        <link rel="preload" href="images/seriuu.webp" as="image" type="image/webp" />
+        <link rel="preload" href="images/me7.webp" as="image" type="image/webp" />
+      </div>
+      <div class="footer-info">
+        <p>&copy; 2025 Winter Suites Hotel. All rights reserved.</p>
+        <div class="footer-links">
+
+          <a href="#"><i class="fas fa-universal-access"></i> Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <!-- Google Maps iframe initialization script -->
+    <script src="scripts/map.js"></script>
+</body>
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="images/fa1.jpg" type="image/jpeg">
+  <title>WINTER SUITES HOTEL RESERVATION</title>
+  <meta name="description" content="WINTER SUITES HOTEL - Your Comfort, Our Priority" />
+
+  <!-- Resource hints for critical assets -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script>
+    // Initialize Firebase
+    const firebaseConfig = {
+      apiKey: "AIzaSyA9-SeBMqujxMleatSd23FM5vlLWdOVUPA",
+      authDomain: "grandpa-523e1.firebaseapp.com",
+      projectId: "grandpa-523e1",
+      storageBucket: "grandpa-523e1.firebasestorage.app",
+      messagingSenderId: "1049062266843",
+      appId: "1:1049062266843:web:6f8b23c5a1f20a7836f9fe"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <link rel="preload" href="images/power.mp4" as="video" type="video/mp4" />
+  <link rel="preload" href="images/shoeee.jpg" as="image" type="image/jpeg" />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/fav.ico" />
+
+  <!-- Critical CSS -->
+  <link rel="stylesheet" href="styles/index.css" />
+  <link rel="stylesheet" href="styles/newsletter.css" />
+  <link rel="stylesheet" href="styles/modal.css" />
+
+  <!-- Optimized font loading -->
+  <link rel="preload" as="font"
+    href="https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuDyfAZ9hiA.woff2"
+    crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+    media="print" onload="this.media='all'" />
+
+  <!-- Font Awesome with optimized loading -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print"
+    onload="this.media='all'" />
+
+  <!-- Add fallback for users with JavaScript disabled -->
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  </noscript>
+
+  <!-- Module scripts loaded with type="module" for better performance -->
+  <script src="scripts/index.js" defer></script>
+  <script src="scripts/cart.js" defer></script>
+  <script src="scripts/menu.js" defer></script>
+  <script src="scripts/enrollment.js" defer></script>
+  <script src="scripts/newsletter.js" defer></script>
+  <script src="scripts/modal.js" defer></script>
+
+  <!-- Image lazy loading setup -->
+  <script>
+    if ("loading" in HTMLImageElement.prototype) {
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll("img[data-src]").forEach((img) => {
+          img.setAttribute("loading", "lazy");
+          img.src = img.dataset.src;
+        });
+      });
+    } else {
+      const script = document.createElement("script");
+      script.src =
+        "https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js";
+      document.body.appendChild(script);
+    }
+  </script>
+</head>
+
+<body>
+  <main>
+    <!-- Quick action buttons -->
+
+    <section class="hero">
+      <div class="slider-container">
+        <div class="slider-track">
+          <div class="slide">
+            <img src="images/w1.jpg" alt="Workshop" />
+          </div>
+          <div class="slide">
+            <img src="images/r1.jpg" alt="Digital Skills" />
+          </div>
+          <div class="slide">
+            <img src="images/w1.jpg" alt="Tailoring Skills" />
+          </div>
+          <div class="slide">
+            <img src="images/r2.jpg" alt="Photography" />
+          </div>
+          <div class="slide">
+            <img src="images/w1.jpg" alt="Business Skills" />
+          </div>
+          <div class="slide">
+            <img src="images/r9.jpg" alt="Web Development" />
+          </div>
+          <div class="slide">
+            <img src="images/w1.jpg" alt="Fashion Design" />
+          </div>
+          <div class="slide">
+            <img src="images/r3.jpg" alt="Students" />
+          </div>
+          <div class="slide">
+            <img src="images/r4.jpg" alt="Office Skills" />
+          </div>
+          <div class="slide">
+            <img src="images/r5.jpg" alt="Workshop Training" />
+          </div>
+          <div class="slide">
+            <img src="images/r6.jpg" alt="Workshop Training" />
+          </div>
+          <div class="slide">
+            <img src="images/w1.jpg" alt="Workshop Training" />
+          </div>
+          <div class="slide">
+            <img src="images/r7.jpg" alt="Workshop Training" />
+          </div>
+          <div class="slide">
+            <img src="images/r8.jpg" alt="Workshop Training" />
+          </div>
+
+          <div class="slide">
+            <img src="images/r9.jpg" alt="Workshop Training" />
+          </div>
+          <div class="slide">
+            <img src="images/r10.jpg" alt="Workshop Training" />
+          </div>
+          <div class="slide">
+            <img src="images/w1.jpg" alt="Workshop Training" />
+          </div>
+          <div class="slide">
+            <img src="images/r11.jpg" alt="Workshop Training" />
+          </div>
+          <div class="slide">
+            <img src="images/r12.jpg" alt="Workshop Training" />
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-content">
+        <h1>WINTER SUITES<br />Hotel Reservation<br /><span>Your Comfort, Our Priority</span></h1>
+        <p>
+          Experience luxury and comfort at WINTER SUITES, your premier destination for relaxation and rejuvenation.
+          Our hotel offers world-class amenities, exceptional service, and a tranquil atmosphere.
+          Book your stay with us today and indulge in the ultimate getaway.
+        </p>
+        <button class="shop-now" onclick="location.href='login.html'">EXPLORE HOTEL</button>
+      </div>
+    </section>
+
+
+
+    <section class="popular-products">
+      <h2
+        style="color:#ebebeb; font-weight:400; text-align: center; letter-spacing:1px; margin-bottom:1rem; text-shadow:0 6px 8px rgb(255, 255, 255);">
+        Room Reservations</h2>
+      <div class="product-grid">
+        <div class="product-card" data-course-id="web-dev">
+
+          <button class="favorite"><i class="fas fa-bookmark"></i></button>
+          <div class="product-info">
+            <div class="course-badge"><i class="fas fa-bed "></i> Room type</div>
+            <h3>Standard Room</h3>
+            <div class="product-media">
+              <video class="product-video" playsinline autoplay muted loop preload="auto" poster="images/nophoto.jpg">
+                <source src="images/standard.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="course-details">
+              <span class="duration"><i class="fas fa-clock"></i>Separate bedroom + living room, luxury amenities,
+                winter view.</span>
+
+            </div>
+            <div class="product-rating">
+              <span class="stars">3.2⭐⭐</span>
+              <span class="reviews">Available</span>
+            </div>
+            <p class="price">₦35,000<span class="installment">/ Per night</span></p>
+            <button class="enroll">Book Now</button>
+          </div>
+        </div>
+        <div class="product-card" data-course-id="digital-marketing">
+
+          <button class="favorite"><i class="fas fa-bookmark"></i></button>
+          <div class="product-info">
+            <div class="course-badge"><i class="fas fa-bed "></i> Room type</div>
+            <h3>Deluxe Room</h3>
+            <div class="product-media">
+              <video class="product-video" playsinline autoplay muted loop preload="auto" poster="images/nophoto.jpg">
+                <source src="images/deluxe.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="course-details">
+              <span class="duration"><i class="fas fa-clock"></i>Spacious, premium furnishings, ideal for business or
+                comfort.</span>
+
+            </div>
+            <div class="product-rating">
+              <span class="stars">3.6 ⭐⭐⭐</span>
+              <span class="reviews">Available</span>
+            </div>
+            <p class="price">₦45,000<span class="installment">/ Per night</span></p>
+            <button class="enroll">Book Now</button>
+          </div>
+        </div>
+        <div class="product-card" data-course-id="fashion">
+
+          <button class="favorite"><i class="fas fa-bookmark"></i></button>
+          <div class="product-info">
+            <div class="course-badge"><i class="fas fa-bed"></i> Room type</div>
+            <h3>Executive Room</h3>
+            <div class="product-media">
+              <video class="product-video" playsinline autoplay muted loop preload="auto" poster="images/nophoto.jpg">
+                <source src="images/executive.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="course-details">
+              <span class="duration"><i class="fas fa-clock"></i>Larger than standard, extra amenities (sofa, minibar,
+                etc.).</span>
+
+            </div>
+            <div class="product-rating">
+              <span class="stars">4.4 ⭐⭐⭐⭐</span>
+              <span class="reviews">Booked</span>
+            </div>
+            <p class="price">₦55,000<span class="installment">/ Per night</span></p>
+            <button class="enroll">Book Now</button>
+          </div>
+        </div>
+        <div class="product-card" data-course-id="photography">
+
+          <button class="favorite"><i class="fas fa-bookmark"></i></button>
+          <div class="product-info">
+            <div class="course-badge"><i class="fas fa-bed"></i> Room type</div>
+            <h3>Suite</h3>
+            <div class="product-media">
+              <video class="product-video" playsinline autoplay muted loop preload="auto" poster="images/nophoto.jpg">
+                <source src="images/suite.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="course-details">
+              <span class="duration"><i class="fas fa-clock"></i>Basic, cozy option with essential facilities.</span>
+
+            </div>
+            <div class="product-rating">
+              <span class="stars">5.0 ⭐⭐⭐⭐⭐</span>
+              <span class="reviews">Available</span>
+            </div>
+            <p class="price">₦100,000<span class="installment">/ Per night</span></p>
+            <button class="enroll">Book Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="collections-2">
+      <h2
+        style="color:#ebebeb; font-weight:400; text-align: center; letter-spacing:1px; margin-bottom:1rem; text-shadow:0 6px 8px rgb(255, 255, 255);">
+        REVIEWS & RATINGS</h2>
+      <div class="collection-grid">
+        <div class="collection-item success-story">
+          <picture>
+            <img src="images/r1.jpg" alt="Student Success Stories" />
+          </picture>
+          <div class="overlay-content">
+            <div class="badge"><i class="fas fa-trophy"></i>Customer Reviews</div>
+            <h3>Room 101</h3>
+            <p>"The Deluxe Room exceeded my expectations — spacious, beautifully decorated, and the staff went above and
+              beyond to make my stay memorable. Will definitely return!"</p>
+            <p class="review-author">— Michael Smith</p>
+
+          </div>
+        </div>
+        <div class="collection-item upcoming-courses">
+          <picture>
+            <img src="images/r2.jpg" alt="Upcoming Training Programs" />
+          </picture>
+          <div class="overlay-content">
+            <div class="badge"><i class="fas fa-calendar-alt"></i>Customer Reviews</div>
+            <h3>Room 108</h3>
+            <p>"I had an amazing stay — the Standard Room was spotless, comfortable, and the winter view from the living
+              room was breathtaking. Exceptional service and excellent amenities; highly recommend!"</p>
+            <p class="review-author">— Enoch Chukwudi</p>
+
+
+          </div>
+        </div>
+        <div class="collection-item industry-partners">
+          <picture>
+            <img src="images/r3.jpg" alt="Industry Partnerships" />
+          </picture>
+          <div class="overlay-content">
+            <div class="badge"><i class="fas fa-handshake"></i>Customer Reviews</div>
+            <h3>Room 104</h3>
+            <p>"The Executive Room was perfect for my business trip — quiet, elegant, and the extra amenities made a
+              real difference. Highly recommended for professionals!"</p>
+            <p class="review-author">— Sarah Chukwuma</p>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+  </main>
+ <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About Winter Suites Hotel</h3>
+        <ul>
+          <li><a href="#" onclick="event.preventDefault(); window.location.href='ourstory.html';"><i
+                class="fas fa-info-circle"></i> About Us</a></li>
+          <li class="ourteam-mobile-margin"><a href="#"
+              onclick="event.preventDefault(); window.location.href='ourteam.html';"><i
+                class="fas fa-chalkboard-teacher"></i> Our Board</a></li>
+
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Rooms</h3>
+        <ul>
+          <li><a href="digital.html"><i class="fas fa-bed"></i> Standard Room</a></li>
+          <li><a href="business.html"><i class="fas fa-gem"></i> Deluxe Room</a></li>
+          <li><a href="vocational.html"><i class="fas fa-briefcase"></i> Executive Room</a></li>
+          <li><a href="soft.html"><i class="fas fa-home"></i> Family Suite</a></li>
+
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <ul>
+          <li><a href="support.html"><i class="fas fa-headset"></i> Customer Support</a></li>
+          <li><a href="map.html"><i class="fas fa-map-marker-alt"></i> Find Us</a></li>
+
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Connect With Us</h3>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="newsletter">
+          <h4>Get Updates on New Courses</h4>
+          <form class="newsletter-form" id="newsletterForm" data-api-url="">
+            <!-- name is optional but improves personalization -->
+            <label class="sr-only" for="newsletterName">Your name (optional)</label>
+            <input type="text" id="newsletterName" name="name" placeholder="Your name (optional)" maxlength="60" />
+
+            <label class="sr-only" for="newsletterEmail">Email address</label>
+            <input type="email" id="newsletterEmail" name="email" placeholder="Enter your email" required
+              aria-describedby="newsletterHelp" />
+
+            <button type="submit" id="submitBtn">
+              <i class="fas fa-paper-plane" aria-hidden="true"></i>
+              <span class="btn-text">Subscribe</span>
+            </button>
+            <span class="sending-text" aria-hidden="true">Sending...</span>
+          </form>
+          <div class="newsletter-message" id="newsletterMessage" role="status" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="payment-methods">
+        <picture>
+          <img src="images/visa.jpg" alt="Visa" />
+        </picture>
+        <picture>
+          <img src="images/mastercard.jpg" alt="Mastercard" />
+        </picture>
+        <picture>
+          <img src="images/verve.jpg" alt="Verve" />
+        </picture>
+        <!-- Preload above-the-fold hero images (WebP preferred) -->
+        <link rel="preload" href="images/serious1.webp" as="image" type="image/webp" />
+        <link rel="preload" href="images/seriuu.webp" as="image" type="image/webp" />
+        <link rel="preload" href="images/me7.webp" as="image" type="image/webp" />
+      </div>
+      <div class="footer-info">
+        <p>&copy; 2025 Winter Suites Hotel. All rights reserved.</p>
+        <div class="footer-links">
+
+          <a href="#"><i class="fas fa-universal-access"></i> Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
